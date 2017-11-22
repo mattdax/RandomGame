@@ -94,14 +94,41 @@ public class GameClass {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter: W for up, S for down, A for left, D for right");
 		String direction = input.nextLine();
-		if(direction == "W" || direction == "w") {
-			System.out.println("Here");
+		
+
+		if(direction.equals("w") || direction.equals("W")) {
+			
+			if(this.y2-1==-1) {
+				System.out.println("You are on the top of the room.\n You cannot move up");
+			}
+			else {
+			a[this.y2][this.x2] = "x".charAt(0);
+			this.y2 -= 1;
+			a[this.y2][this.x2] = "P".charAt(0);
+			displayBoard(a);
+		}
+		
+		}
+		 
+
+		 else if(direction.equals("s") || direction.equals("S")) {
 			a[this.y2][this.x2] = "x".charAt(0);
 			this.y2 += 1;
 			a[this.y2][this.x2] = "P".charAt(0);
 			displayBoard(a);
 		}
-
+		else if(direction.equals("a") || direction.equals("A")) {
+			a[this.y2][this.x2] = "x".charAt(0);
+			this.x2 -= 1;
+			a[this.y2][this.x2] = "P".charAt(0);
+			displayBoard(a);
+		}
+		else if(direction.equals("d") || direction.equals("D")) {
+			a[this.y2][this.x2] = "x".charAt(0);
+			this.x2 += 1;
+			a[this.y2][this.x2] = "P".charAt(0);
+			displayBoard(a);
+		}
 	}											
 
 }
