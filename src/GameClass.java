@@ -362,7 +362,12 @@ public class GameClass {
 						}
 					}
 				}											
+			
 			}
-		}
+		//End Game
+		System.out.println("Congratulations! You have completeed the game\nCreator: Matt Dax")
+		java.lang.System.exit(0);
+	}
+	
 }
 	
